@@ -77,6 +77,11 @@ module ID #(
     wire [4:0]  ex_rf_waddr, mem1_rf_waddr, mem2_rf_waddr, wb_rf_waddr;
     wire [63:0] ex_rf_wdata, mem1_rf_wdata, mem2_rf_wdata, wb_rf_wdata;
 
+    assign {ex_rf_we, ex_rf_waddr, ex_rf_wdata} = ex2id_fwd;
+    assign {mem1_rf_we, mem1_rf_waddr, mem1_rf_wdata} = mem12id_fwd;
+    assign {mem2_rf_we, mem2_rf_waddr, mem2_rf_wdata} = mem22id_fwd;
+    assign {wb_rf_we, wb_rf_waddr, wb_rf_wdata} = wb2id_fwd;
+
     decoder_64i u_decoder_64i(
     	.inst          (inst          ),
         .sel_src1      (sel_src1      ),
