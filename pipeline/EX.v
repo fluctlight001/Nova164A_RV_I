@@ -35,7 +35,7 @@ module EX #(
             id2ex_bus_r <= 0;
         end
         else if (!stall[3]) begin
-            id2ex_bus_r <= 0;
+            id2ex_bus_r <= id2ex_bus;
         end
     end
 

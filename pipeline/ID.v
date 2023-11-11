@@ -11,6 +11,7 @@ module ID #(
     input wire rst_n,
     input wire flush,
     input wire [`StallBus-1:0] stall,
+    output wire stallreq_id,
 
     input wire [32:0] br_bus,
 
