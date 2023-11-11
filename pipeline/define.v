@@ -1,1 +1,0 @@
-`define StallBus 8
